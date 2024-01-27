@@ -21,7 +21,7 @@ final class LinuxAutoLaunch implements PlatformAutoLaunch {
                 "Type=Application\n" +
                 "Version=1.0\n" +
                 "Name=" + autoLaunch.getAppName() + "\n" +
-                "Comment=" + autoLaunch.getAppName() + "startup script\n" +
+                "Comment=" + autoLaunch.getAppName() + " startup script\n" +
                 "Exec=" + autoLaunch.startupCommand(false) + "\n" +
                 "StartupNotify=false\n" +
                 "Terminal=false";
