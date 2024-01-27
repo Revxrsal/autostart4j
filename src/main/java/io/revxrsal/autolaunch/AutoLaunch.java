@@ -4,6 +4,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -21,7 +23,7 @@ public final class AutoLaunch {
     AutoLaunch(@NotNull String appName, @NotNull File appFile, @NotNull List<String> args, boolean useLaunchAgent) {
         this.appName = notNull(appName, "app name");
         this.appFile = notNull(appFile, "app file");
-        this.args = List.copyOf(notNull(args, "args"));
+        this.args = Collections.unmodifiableList(new ArrayList<>(notNull(args, "args")));
         this.useLaunchAgent = useLaunchAgent;
     }
 
@@ -101,7 +103,7 @@ public final class AutoLaunch {
         }
 
         public Builder args(String @NotNull ... args) {
-            this.args = List.of(notNull(args, "args"));
+            this.args = Arrays.asList(notNull(args, "args"));
             return this;
         }
 
