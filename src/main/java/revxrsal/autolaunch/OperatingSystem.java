@@ -1,4 +1,4 @@
-package io.revxrsal.autolaunch;
+package revxrsal.autolaunch;
 
 enum OperatingSystem {
     LINUX,

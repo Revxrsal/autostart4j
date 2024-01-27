@@ -1,4 +1,4 @@
-package io.revxrsal.autolaunch;
+package revxrsal.autolaunch;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Unmodifiable;
@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static io.revxrsal.autolaunch.Utils.notNull;
+import static revxrsal.autolaunch.Utils.notNull;
 
 /**
  * The entrypoint class for creating and configuring applications

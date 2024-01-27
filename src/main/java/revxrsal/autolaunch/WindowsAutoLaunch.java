@@ -1,4 +1,4 @@
-package io.revxrsal.autolaunch;
+package revxrsal.autolaunch;
 
 import com.sun.jna.platform.win32.Win32Exception;
 import org.jetbrains.annotations.NotNull;

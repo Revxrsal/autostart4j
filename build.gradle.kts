@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
 }
 
-group = "io.revxrsal"
+group = "revxrsal"
 version = "1.0"
 
 repositories {

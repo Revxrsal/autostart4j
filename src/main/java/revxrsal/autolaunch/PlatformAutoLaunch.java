@@ -1,4 +1,4 @@
-package io.revxrsal.autolaunch;
+package revxrsal.autolaunch;
 
 import org.jetbrains.annotations.NotNull;
 

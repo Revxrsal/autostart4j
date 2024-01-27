@@ -1,4 +1,4 @@
-package io.revxrsal.autolaunch;
+package revxrsal.autolaunch;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import static io.revxrsal.autolaunch.Utils.sneakyThrow;
+import static revxrsal.autolaunch.Utils.sneakyThrow;
 
 /**
  * The {@link PlatformAutoLaunch} implementation for Linux

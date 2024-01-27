@@ -1,4 +1,4 @@
-package io.revxrsal.autolaunch;
+package revxrsal.autolaunch;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static io.revxrsal.autolaunch.Utils.sneakyThrow;
+import static revxrsal.autolaunch.Utils.sneakyThrow;
 
 /**
  * The {@link PlatformAutoLaunch} implementation for macOS
