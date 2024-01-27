@@ -7,13 +7,12 @@ enum OperatingSystem {
     UNKNOWN;
 
     public static OperatingSystem current() {
-        String name = System.getProperty("os.name");
-        if (name == null) name = "";
-        if (name.startsWith("Linux"))
+        String name = System.getProperty("os.name").toLowerCase();
+        if (name.startsWith("linux"))
             return OperatingSystem.LINUX;
-        if (name.startsWith("Win"))
+        if (name.startsWith("win"))
             return OperatingSystem.WINDOWS;
-        if (name.startsWith("Mac OS X"))
+        if (name.startsWith("mac os x"))
             return OperatingSystem.MAC_OS;
         return OperatingSystem.UNKNOWN;
     }
