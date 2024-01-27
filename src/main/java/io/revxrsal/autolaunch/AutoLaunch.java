@@ -169,7 +169,7 @@ public final class AutoLaunch {
      *
      * @return A new builder
      */
-    public static Builder builder() {
+    public static @NotNull Builder builder() {
         return new Builder();
     }
 
@@ -217,7 +217,7 @@ public final class AutoLaunch {
          * @param appName The application name
          * @return this builder instance
          */
-        public Builder appName(String appName) {
+        public Builder appName(@NotNull String appName) {
             this.appName = notNull(appName, "app name");
             if (appName.isEmpty())
                 throw new IllegalArgumentException("Application name cannot be empty!");
@@ -232,7 +232,7 @@ public final class AutoLaunch {
          * @param appFile The application file
          * @return this builder instance
          */
-        public Builder appFile(File appFile) {
+        public Builder appFile(@NotNull File appFile) {
             this.appFile = notNull(appFile, "app file");
             return this;
         }
@@ -255,7 +255,7 @@ public final class AutoLaunch {
          * @param args Arguments to launch with
          * @return this builder instance
          */
-        public Builder args(List<String> args) {
+        public Builder args(@NotNull List<@NotNull String> args) {
             this.args = notNull(args, "args");
             return this;
         }
