@@ -28,7 +28,7 @@ final class LinuxAutoLaunch implements PlatformAutoLaunch {
     }
 
 
-    // get the plist file path
+    // get the .desktop file path
     private static Path getFile(AutoLaunch autoLaunch) {
         return getAutoStartDir().resolve(autoLaunch.getAppName() + ".desktop");
     }
