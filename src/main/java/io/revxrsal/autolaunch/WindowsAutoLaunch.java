@@ -6,15 +6,18 @@ import org.jetbrains.annotations.NotNull;
 import static com.sun.jna.platform.win32.Advapi32Util.*;
 import static com.sun.jna.platform.win32.WinReg.HKEY_CURRENT_USER;
 
+/**
+ * The {@link PlatformAutoLaunch} implementation for Windows
+ */
 final class WindowsAutoLaunch implements PlatformAutoLaunch {
+
+    public static final WindowsAutoLaunch INSTANCE = new WindowsAutoLaunch();
 
     private static final String RUN_APP = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
     private static final String TASK_MANAGER_OVERRIDE_REGKEY = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run";
     private static final byte[] TASK_MANAGER_OVERRIDE_ENABLED_VALUE = new byte[]{
             0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
     };
-
-    public static final WindowsAutoLaunch INSTANCE = new WindowsAutoLaunch();
 
     @Override
     public void enable(@NotNull AutoLaunch autoLaunch) {

@@ -6,6 +6,9 @@ import org.jetbrains.annotations.NotNull;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+/**
+ * Contains a few shared utility functions
+ */
 final class Utils {
 
     private Utils() {}

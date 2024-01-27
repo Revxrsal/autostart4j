@@ -9,6 +9,9 @@ import java.nio.file.Paths;
 
 import static io.revxrsal.autolaunch.Utils.sneakyThrow;
 
+/**
+ * The {@link PlatformAutoLaunch} implementation for Linux
+ */
 final class LinuxAutoLaunch implements PlatformAutoLaunch {
 
     public static final LinuxAutoLaunch INSTANCE = new LinuxAutoLaunch();

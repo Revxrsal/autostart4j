@@ -13,6 +13,9 @@ import java.util.stream.Collectors;
 
 import static io.revxrsal.autolaunch.Utils.sneakyThrow;
 
+/**
+ * The {@link PlatformAutoLaunch} implementation for macOS
+ */
 final class MacOSAutoLaunch implements PlatformAutoLaunch {
 
     public static final MacOSAutoLaunch INSTANCE = new MacOSAutoLaunch();
