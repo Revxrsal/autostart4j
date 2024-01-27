@@ -18,8 +18,8 @@ final class Utils {
     }
 
     @Contract("_ -> fail")
+    @SuppressWarnings("unchecked")
     public static <E extends Throwable> void sneakyThrow(Throwable e) throws E {
-        //noinspection unchecked
         throw (E) e;
     }
 
