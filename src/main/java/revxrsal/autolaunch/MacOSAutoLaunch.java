@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static revxrsal.autolaunch.Utils.escapeJava;
 import static revxrsal.autolaunch.Utils.sneakyThrow;
 
 /**
@@ -98,7 +99,8 @@ final class MacOSAutoLaunch implements PlatformAutoLaunch {
 
     private static @NotNull Process executeAppleScript(String script) {
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder("osascript", "-e", script);
+            String command = '"' + escapeJava(script) + '"';
+            ProcessBuilder processBuilder = new ProcessBuilder("osascript", "-e", command);
             return processBuilder.start();
         } catch (IOException e) {
             sneakyThrow(e);
